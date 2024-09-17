@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+    <body style="background-color: #323232;" >
+        <div class="row offset-3 col-8">
+            <h1 class="col-8 mt-5 text-primary" >  Chat  details </h1>
+            <div class="card col-6 mb-3 mt-4 border-3 bg-dark">
+                <p class="text-warning mt-2" >User is: <strong class="text-light"><%= Chat._id %></strong> </p>
+
+                <h2 class="text-warning mt-3" >From : <strong class="text-light"><%= Chat.from %></strong>  To:  <strong class="text-light" ><%= Chat.to %></strong></h2>
+
+                <p class="text-warning" >Messagee: <strong class="text-light"> <%= Chat.message %> </strong></p>
+            
+                <form  action="/chats" >
+                    <button class="btn btn-warning mb-3">Go back</button>
+            
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

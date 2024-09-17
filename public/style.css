@@ -1,6 +1,9 @@
 
 body{
     margin-left: 30px;
+    background-color: #303030 !important;
+
+   
 }
 
 .chat{
@@ -9,6 +12,7 @@ body{
     border-radius: 16px;
     padding: 20px;
     display: inline-block;
+    /* margin-left: 5px; */
 }
 .message{
 

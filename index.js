@@ -73,6 +73,7 @@ app.post('/chats', asyncWrap (async (req,res,next)=>{
     
         res.redirect("/chats")
 
+        
 }));
 
 // edit route
@@ -115,19 +116,18 @@ app.get('/chats/:id',asyncWrap( async(req,res,next)=>{
 
     
         let {id}=req.params;
+        
 
-        const Chats=await chat.findById(id);
+        const Chat=await chat.findById(id);
+        
+        
+        
     
-        if(!Chats){
+        if(!Chat){
           next(new ExpressError(404,"chat not found"))   
         }
     
-        res.render('edit.ejs',{Chats});
-
-
-
-
-
+        res.render('show.ejs',{Chat});
 }))
 
 
