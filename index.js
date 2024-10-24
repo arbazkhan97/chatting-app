@@ -39,8 +39,7 @@ async function main() {
 app.get("/chats", asyncWrap (async (req,res)=>{
    
         let chats=await chat.find();
-        console.log(chats);
-
+        
         res.render('index.ejs',{chats})
         
 
@@ -71,7 +70,7 @@ app.post('/chats', asyncWrap (async (req,res,next)=>{
     
         await newChat.save()
 
-        console.log(newChat);
+        
         
     
         res.redirect("/chats")
